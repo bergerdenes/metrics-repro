@@ -1,12 +1,16 @@
 package org.example.repro;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 
-@RestController
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+
+@Controller
+@Path("")
 public class TestController {
 
-    @GetMapping(path = "/test")
+    @GET
+    @Path("test")
     public String testResponse() {
         return "testing";
     }
